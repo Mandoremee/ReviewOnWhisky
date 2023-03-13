@@ -6,25 +6,47 @@
     <style>
         #main_grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-        }
-        
-        #menu{
-            border-right: 1px solid black;
-            text-align: center;
-            padding:15px;
+            grid-template-columns: 1.2fr 2fr;
         }
 
-        #source_page_link{
+        #top_contents {
             text-align: center;
-            padding:10px;
+            border-bottom: 4px solid black;
+            margin-bottom: 0px;
+        }
+
+        #top_menu_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            border-bottom: 4px solid black;
+        }
+
+        #top_menu_grid span {
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            margin: 0px;
+            padding: 6px;
+            font-weight: 800;
+            font-size: larger;
+        }
+
+        #menu {
+            border-right: 4px solid black;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #source_page_link {
+            text-align: center;
+            padding: 10px;
         }
 
         h1 {
-            border-bottom: 1px solid black;
+            border-bottom: 4px solid black;
             padding-bottom: 20px;
             font-size: 45px;
             text-align: center;
+            margin-bottom: 0px;
         }
 
         .no_dot {
@@ -50,38 +72,54 @@
 </head>
 
 <body>
-    <h1>소개하는 말</h1>
-    <div style="padding: 10px; text-align: center; border-bottom: 1px solid black; margin-bottom: 0px;">
-        <img src="pexels-isabella-mendes-1304540.jpg" width="300">
-        <p>이곳은 제가, 그리고 여러분들이 마셔봤거나 혹은 마셔볼 <strong><u>위스키</u>에 대한 많은 정보</strong>를 담고
-            있습니다(진)</br>
-            지금은 말 그대로 아무것도 없지만, 저는 <strong>앞으로 이 웹사이트를 <u>계속해서 키워나갈 것</u></strong>입니다.</br>
-            그리고 그로 하여금 더 많은 사람들이 <strong>위스키를 소주나 맥주와 같이 <u>편하게</u> 즐길 수 있기를</strong> 바랍니다.
-        </p>
+    <h1>리뷰 온 위스키</h1>
+    <div id="top_contents">
+        <div id="top_menu_grid">
+            <span><a href="find.html">위스키 찾기</a></span>
+            <span><a href="review.html">위스키 리뷰</a></span>
+            <span><a href="suggest.html">위스키 추천</a></span>
+            <span><a href="near_bar.html">가까운 바 찾기</a></span>
+            <span><a href="community.html">커뮤니티</a></span>
+        </div>
+        <div style="margin-top: 10px;">
+            <img style="border-style: solid; color: black;" src="pexels-isabella-mendes-1304540.jpg" width="300">
+            <p>이곳은 제가, 그리고 여러분들이 마셔봤거나 혹은 마셔볼 <strong><u>위스키</u>에 대한 많은 정보</strong>를 담고
+                있습니다(진)</br>
+                지금은 말 그대로 아무것도 없지만, 저는 <strong>앞으로 이 웹사이트를 <u>계속해서 키워나갈 것</u></strong>입니다.</br>
+                그리고 그로 하여금 더 많은 사람들이 <strong>위스키를 소주나 맥주와 같이 <u>편하게</u> 즐길 수 있기를</strong> 바랍니다.
+            </p>
+        </div>
     </div>
     <div id="main_grid">
-        <div id="menu" >
-            <h2><strong>이 사이트가 제공해 줄 서비스</strong></h2>
+        <div id="menu">
+            <h2><strong>위스키 정보</strong></h2>
             <ul class="no_dot">
-                <li><a href="find.html"><h3>위스키 찾기</h3></a></li>
-                <li><a href="review.html"><h3>위스키 리뷰</h3></a></li>
-                <li><a href="suggest.html"><h3>위스키 추천</h3></a></li>
-                <li><a href="near_bar.html"><h3>가까운 바 찾기</h3></a></li>
-                <li><a href="community.html"><h3>커뮤니티</h3></a></li>
+                <li><a href="https://namu.wiki/w/%EC%9C%84%EC%8A%A4%ED%82%A4" target="_blank">
+                        <h3>위스키란?</h3>
+                    </a></li>
+                <li><a href="https://www.youtube.com/watch?v=8rDWHUfEhdk" target="_blank">
+                        <h3>입문자 추천 정보</h3>
+                    </a></li>
+                <li><a href="">
+                        <h3>랜덤 위스키 추천(미구현)</h3>
+                    </a></li>
+                <li><a href="">
+                        <h3>오늘의 추천 무드(미구현)</h3>
+                    </a></li>
             </ul>
         </div>
         <div id="source_page_link">
             <h2>힘을 냅시다. 나 자신!</h2>
             <a href="https://github.com/Mandoremee/ReviewOnWhisky" target="_blank" title="github">
                 <div class="in_black_box">
-                    <img src="깃허브 로고.png" width="60" style="margin-top: 10px;"></br>
-                    <h3>이 프로젝트의 깃허브 '오픈소스 페이지'로 가기</h3>
+                    <img src="깃허브 로고.png" width="40" style="margin-top: 10px;"></br>
+                    <h3 style="margin-top: 5px; margin-bottom: 8px;">이 프로젝트의 깃허브 '오픈소스 페이지'로 가기</h3>
                 </div>
             </a>
             <a href="https://mandoremee.github.io/ReviewOnWhisky/" target="_blank" title="github">
                 <div class="in_black_box">
-                    <img src="My_git_icon.jpg" width="60" style="margin-top: 10px;"></br>
-                    <h3>이 프로젝트의 깃허브 '호스팅 페이지'로 가기</h3>
+                    <img src="My_git_icon.jpg" width="40" style="margin-top: 10px;"></br>
+                    <h3 style="margin-top: 5px; margin-bottom: 8px;">이 프로젝트의 깃허브 '호스팅 페이지'로 가기</h3>
                 </div>
             </a>
         </div>
