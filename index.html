@@ -4,17 +4,6 @@
     <title>Review On Whisky</title>
     <meta charset="utf-8">
     <style>
-        #main_grid {
-            display: grid;
-            grid-template-columns: 1.2fr 2fr;
-        }
-
-        #top_contents {
-            text-align: center;
-            border-bottom: 4px solid black;
-            margin-bottom: 0px;
-        }
-
         #top_menu_grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -29,16 +18,43 @@
             font-weight: 800;
             font-size: larger;
         }
+        
+        #top_contents {
+            text-align: center;
+            border-bottom: 4px solid black;
+            margin-bottom: 0px;
+        }
 
-        #menu {
+        #bottom_grid {
+            display: grid;
+            grid-template-columns: 1.2fr 2fr;
+        }
+
+        #bottom_menu {
             border-right: 4px solid black;
             text-align: center;
             padding: 15px;
         }
 
+        #bottom_grid a {
+            color: rgb(76, 163, 76);
+            background-color: rgb(248, 243, 236);
+            text-decoration: none;
+        }
+
         #source_page_link {
             text-align: center;
             padding: 10px;
+        }
+
+        .no_dot {
+            list-style-type: none;
+        }
+
+        .in_black_box {
+            border-style: solid;
+            border-color: black;
+            margin-top: 10px;
         }
 
         h1 {
@@ -49,24 +65,50 @@
             margin-bottom: 0px;
         }
 
-        .no_dot {
-            list-style-type: none;
-        }
-
         li {
             margin-right: 50px;
         }
-
-        .in_black_box {
-            border-style: solid;
-            border-color: black;
-            margin-top: 10px;
-        }
-
-        #main_grid a {
-            color: rgb(76, 163, 76);
-            background-color: rgb(248, 243, 236);
-            text-decoration: none;
+        
+        @media(max-width:800px){
+            .top_contents_class br{
+                display: none;
+            }
+            #top_menu_grid {
+                display:inline-block;
+                inline-size: 100%;
+                border-bottom: 4px solid black;
+            }
+            #top_menu_grid span {
+                display: block;
+                border-bottom: 2px solid black;
+                border-left: none;
+                border-right: none;
+                margin: 0px;
+                padding: 6px;
+                font-weight: 800;
+                font-size: larger;
+            }
+            #top_contents {
+                text-align: center;
+                border-bottom: 2px solid black;
+                margin-bottom: 20px;
+            }
+            #bottom_grid{
+                display: block;
+                grid-template-rows: 1fr 1fr;
+            }
+            #bottom_menu {
+                border: 4px solid black;
+                text-align: center;
+                padding: 10px;
+                margin: 5px;
+            }
+            #source_page_link {
+                border: 4px solid black;
+                text-align: center;
+                padding: 10px;
+                margin: 5px;
+            }
         }
     </style>
 </head>
@@ -81,7 +123,7 @@
             <span><a href="near_bar.html">가까운 바 찾기</a></span>
             <span><a href="community.html">커뮤니티</a></span>
         </div>
-        <div style="margin-top: 10px;">
+        <div class="top_contents_class" style="margin-top: 10px;">
             <img style="border-style: solid; color: black;" src="pexels-isabella-mendes-1304540.jpg" width="300">
             <p>이곳은 제가, 그리고 여러분들이 마셔봤거나 혹은 마셔볼 <strong><u>위스키</u>에 대한 많은 정보</strong>를 담고
                 있습니다(진)</br>
@@ -90,8 +132,8 @@
             </p>
         </div>
     </div>
-    <div id="main_grid">
-        <div id="menu">
+    <div id="bottom_grid">
+        <div id="bottom_menu">
             <h2><strong>위스키 정보</strong></h2>
             <ul class="no_dot">
                 <li><a href="https://namu.wiki/w/%EC%9C%84%EC%8A%A4%ED%82%A4" target="_blank">
